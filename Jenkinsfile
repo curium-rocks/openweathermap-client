@@ -88,5 +88,8 @@ pipeline {
     success{
        mattermostSend color: "good", message: "[OWM-Client] Build Success - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
     }
+    always {
+       archiveArtifacts artifacts: 'build/**/*,coverage/**/*', fingerprint: true
+    }
   }
 }
