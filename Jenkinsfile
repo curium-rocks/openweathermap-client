@@ -66,8 +66,8 @@ pipeline {
         }
         steps {
             container('node-build') {
-                sh 'git config --global user.email "jenkins@curium.rocks"'
-                sh 'git config --global user.name "Jenkins"'
+                sh 'git config user.email "jenkins@curium.rocks"'
+                sh 'git config user.name "Jenkins"'
                 sh 'npm version major'
                 sh 'git config credential.helper "/bin/bash ' + env.WORKSPACE + '/scripts/git-cred-helper.sh"'
                 withCredentials([usernamePassword(credentialsId: '8f3d53bd-754f-4df3-bc87-59ce5ba6e63e',
