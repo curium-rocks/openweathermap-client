@@ -5,5 +5,6 @@ import { MultiCityResponse } from "./responses/multiCityResponse";
 import { PollutionApi } from "./pollutionApi";
 import { AirPollutionRequest } from "./requests/airPollutionRequest";
 import { AirPollutionResponse } from "./responses/airPollutionResponse";
+import { OwmClient } from "./owmClient";
 
-export {CurrentRequest, CityWeather, CurrentWeatherApi, MultiCityResponse, PollutionApi, AirPollutionResponse, AirPollutionRequest }
+export { CurrentRequest, CityWeather, CurrentWeatherApi, MultiCityResponse, PollutionApi, AirPollutionResponse, AirPollutionRequest, OwmClient }

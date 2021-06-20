@@ -1,4 +1,3 @@
-import {PollutionApi} from "./pollutionApi";
 # openweathermap-client
 
 A typescript OpenWeatherMap client
@@ -7,19 +6,19 @@ A typescript OpenWeatherMap client
 
 ```typescript
 import axios from "axios";
-import {CurrentWeatherApi, PollutionApi} from '@curium.rocks/openweathermap-client';
+import {OwmClient} from '@curium.rocks/openweathermap-client';
 
 const apiToken = process.env.OWM_TOKEN;
-const currentApi = new CurrentWeatherApi(axios);
+const owmClient = new OwmClient(axios);
 
-const currentWeather = await currentApi.getCurrentWeather({
+const currentWeather = await owmClient.current.getCurrentWeather({
     appid: apiToken,
     city: 'London'
 });
 
 console.log('The current weather in London: ', currentWeather);
 
-const currentWeatherNearArea = await currentApi.getCurrentWeatherNearby({
+const currentWeatherNearArea = await owmClient.current.getCurrentWeatherNearby({
     appid: apiToken,
     lat: 29.422789,
     lon: -98.507065,
@@ -28,7 +27,7 @@ const currentWeatherNearArea = await currentApi.getCurrentWeatherNearby({
 
 console.log('The current weather for areas nearby: ', currentWeatherNearArea);
 
-const currentWeatherInRegion = await currentApi.getCurrentWeatherForArea({
+const currentWeatherInRegion = await owmClient.current.getCurrentWeatherForArea({
     appid: apiToken,
     bbox: [
         {
@@ -44,23 +43,21 @@ const currentWeatherInRegion = await currentApi.getCurrentWeatherForArea({
 
 console.log('The current weather data for the bounding area: ', currentWeatherInRegion);
 
-const pollutionApi = new PollutionApi(axios);
-
-const currentPollution = pollutionApi.getCurrentAirPollution({
+const currentPollution = owmClient.pollution.getCurrentAirPollution({
     appid: apiToken,
     lat: 41.76106,
     lon: -85.94055
 });
 console.log('The current pollution levels: ', currentPollution);
 
-const forecastedPollution = await pollutionApi.getForecastedAirPollution({
+const forecastedPollution = await owmClient.pollution.getForecastedAirPollution({
     appid: apiToken,
     lat: 41.76106,
     lon: -85.94055
 });
 console.log('The forecasted air pollution levels: ', forecastedPollution);
 
-const historicalPollution = await pollutionApi({
+const historicalPollution = await owmClient.pollution.getHistoricalAirPollution({
     lat: 41.76106,
     lon: -85.94055,
     start: new Date(new Date().getDate()-1),

@@ -36,7 +36,9 @@ describe( 'PollutionApi', function() {
         });
     });
     describe('getHistoricalAirPollution()', function() {
-       it( 'Should provide data', function() {
+        it( 'Should provide data', function() {
+            // eslint-disable-next-line no-invalid-this
+           this.timeout(5000);
            const api = new PollutionApi(axios);
            return api.getHistoricalAirPollution({
                lat: 29.422789,
