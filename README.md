@@ -71,4 +71,5 @@ const allInOne = await owmClient.onecall.getDate({
     lon: -85.94055,
     appid: apiToken
 });
+console.log('The combined summary data is: ', allInOne);
 ```
