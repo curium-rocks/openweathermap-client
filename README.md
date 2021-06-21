@@ -1,6 +1,6 @@
 # openweathermap-client
 
-A typescript OpenWeatherMap client.
+A typescript OpenWeatherMap client, [API docs located here](https://openweathermap.org/api).
 
 APIs supported.
 - OneCall
