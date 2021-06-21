@@ -2,7 +2,7 @@
 
 A typescript OpenWeatherMap client
 
-## Example
+## Example(s)
 
 ```typescript
 import axios from "axios";
