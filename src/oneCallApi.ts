@@ -1,7 +1,5 @@
 import {AxiosInstance} from "axios";
 import {OneCallRequest} from "./requests/oneCallRequest";
-import {AirPollutionResponse} from "./responses/airPollutionResponse";
-import base = Mocha.reporters.base;
 import {OneCallApiResponse} from "./responses/oneCallApiResponse";
 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/onecall';
@@ -17,6 +15,12 @@ export class OneCallApi {
      */
     constructor(private httpClient: AxiosInstance) {}
 
+    /**
+     *
+     * @param {OneCallRequest}request
+     * @private
+     * @return {unknown}
+     */
     private buildParams(request : OneCallRequest) : unknown {
         const exclude = request.exclude ? request.exclude.reduce((acc:string, cur:string)=>{
             if(acc != null) acc += ',';

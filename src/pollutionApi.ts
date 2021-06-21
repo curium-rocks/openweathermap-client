@@ -1,7 +1,6 @@
 import {AxiosInstance} from "axios";
 import {AirPollutionRequest} from "./requests/airPollutionRequest";
 import {AirPollutionResponse} from "./responses/airPollutionResponse";
-import {start} from "repl";
 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/air_pollution';
 const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/air_pollution/forecast';
