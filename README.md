@@ -1,6 +1,11 @@
 # openweathermap-client
 
-A typescript OpenWeatherMap client
+A typescript OpenWeatherMap client.
+
+APIs supported.
+- OneCall
+- Pollution
+- CurrentWeather
 
 ## Example(s)
 
