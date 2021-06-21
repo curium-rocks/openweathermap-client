@@ -65,4 +65,10 @@ const historicalPollution = await owmClient.pollution.getHistoricalAirPollution(
     appid: apiToken
 });
 console.log('The pollution levels for the past day: ', historicalPollution);
+
+const allInOne = await owmClient.onecall.getDate({
+    lat: 41.76106,
+    lon: -85.94055,
+    appid: apiToken
+});
 ```
