@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      OWM_TOKEN: ${{ secrets.OWM_TOKEN}}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
