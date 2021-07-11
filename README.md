@@ -1,5 +1,8 @@
 # openweathermap-client
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=curium-rocks_openweathermap-client&metric=alert_status)](https://sonarcloud.io/dashboard?id=curium-rocks_openweathermap-client) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=curium-rocks_openweathermap-client&metric=security_rating)](https://sonarcloud.io/dashboard?id=curium-rocks_openweathermap-client)[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=curium-rocks_openweathermap-client&metric=coverage)](https://sonarcloud.io/dashboard?id=curium-rocks_openweathermap-client)
+
+
 A typescript OpenWeatherMap client, [API docs located here](https://openweathermap.org/api).
 
 APIs supported.

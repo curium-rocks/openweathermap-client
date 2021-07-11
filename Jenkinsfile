@@ -76,7 +76,7 @@ pipeline {
                     sh 'git push origin HEAD:master'
                 }
                 sh 'npm config set //registry.npmjs.org/:_authToken ${NODE_ACCESS_TOKEN}'
-                sh 'npm publish --dry-run --access public'
+                sh 'npm publish --access public'
             }
         }
     }
