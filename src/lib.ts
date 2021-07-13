@@ -1,11 +1,11 @@
-import { CityWeather } from "./models/cityWeather";
-import { CurrentRequest } from "./requests/currentRequest";
-import { CurrentWeatherApi } from "./currentWeatherApi";
-import { MultiCityResponse } from "./responses/multiCityResponse";
-import { PollutionApi } from "./pollutionApi";
-import { AirPollutionRequest } from "./requests/airPollutionRequest";
-import { AirPollutionResponse } from "./responses/airPollutionResponse";
-import { OwmClient } from "./owmClient";
-import { OneCallApi } from "./oneCallApi";
+export { CityWeather } from "./models/cityWeather";
+export { CurrentRequest } from "./requests/currentRequest";
+export { CurrentWeatherApi } from "./currentWeatherApi";
+export { MultiCityResponse } from "./responses/multiCityResponse";
+export { PollutionApi } from "./pollutionApi";
+export { AirPollutionRequest } from "./requests/airPollutionRequest";
+export { AirPollutionResponse } from "./responses/airPollutionResponse";
+export { OwmClient } from "./owmClient";
+export { OneCallApi } from "./oneCallApi";
+export { OneCallApiResponse } from './responses/oneCallApiResponse';
 
-export { CurrentRequest, CityWeather, CurrentWeatherApi, MultiCityResponse, PollutionApi, AirPollutionResponse, AirPollutionRequest, OwmClient, OneCallApi }
