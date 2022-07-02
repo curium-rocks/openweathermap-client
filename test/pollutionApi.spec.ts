@@ -5,41 +5,39 @@ import axios from "axios";
 
 describe( 'PollutionApi', function() {
     const apiToken = process.env.OWM_TOKEN as string;
-    const runPremiumTests = process.env.OWM_PREMIUM_TESTS === 'true';
-    if (runPremiumTests) {
-        describe( 'getCurrentAirPollution()', function() {
-            it( 'Should provide pollution levels', function() {
-                const api = new PollutionApi(axios);
-                return api.getCurrentAirPollution({
-                    lat: 29.422789,
-                    lon: -98.507065,
-                    appid: apiToken
-                }).then((res) => {
-                    should().exist(res.coord);
-                    should().equal(res.coord.lat, 29.4228);
-                    should().equal(res.coord.lon, -98.5071);
-                    should().exist(res.list);
-                });
+    describe( 'getCurrentAirPollution()', function() {
+        it( 'Should provide pollution levels', function() {
+            const api = new PollutionApi(axios);
+            return api.getCurrentAirPollution({
+                lat: 29.422789,
+                lon: -98.507065,
+                appid: apiToken
+            }).then((res) => {
+                should().exist(res.coord);
+                should().equal(res.coord.lat, 29.4228);
+                should().equal(res.coord.lon, -98.5071);
+                should().exist(res.list);
             });
         });
-        describe('getForecastedAirPollution()', function() {
-            it('Should provide a forecast', function() {
-                const api = new PollutionApi(axios);
-                return api.getForecastedAirPollution({
-                    lat: 29.422789,
-                    lon: -98.507065,
-                    appid: apiToken
-                }).then((res) => {
-                    should().exist(res.coord);
-                    should().equal(res.coord.lat, 29.4228);
-                    should().equal(res.coord.lon, -98.5071);
-                    should().exist(res.list);
-                });
+    });
+    describe('getForecastedAirPollution()', function() {
+        it('Should provide a forecast', function() {
+            const api = new PollutionApi(axios);
+            return api.getForecastedAirPollution({
+                lat: 29.422789,
+                lon: -98.507065,
+                appid: apiToken
+            }).then((res) => {
+                should().exist(res.coord);
+                should().equal(res.coord.lat, 29.4228);
+                should().equal(res.coord.lon, -98.5071);
+                should().exist(res.list);
             });
         });
-        describe('getHistoricalAirPollution()', function() {
-            it( 'Should provide data', function() {
-                // eslint-disable-next-line no-invalid-this
+    });
+    describe('getHistoricalAirPollution()', function() {
+        it( 'Should provide data', function() {
+            // eslint-disable-next-line no-invalid-this
             this.timeout(5000);
             const api = new PollutionApi(axios);
             return api.getHistoricalAirPollution({
@@ -55,6 +53,5 @@ describe( 'PollutionApi', function() {
                 should().exist(res.list);
             });
         });
-        });
-    }
+    });
 });
