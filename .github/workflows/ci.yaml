@@ -22,6 +22,12 @@ jobs:
     - run: npm audit --only=prod
     - run: npm run build
     - run: npm run test
+    - if: ${{ github.actor != 'dependabot[bot]' }}
+      name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - run: npm run doc
     - uses: actions/upload-artifact@v3
       with:
