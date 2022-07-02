@@ -32,7 +32,6 @@ jobs:
         name: build-artifacts
         path: |
           build/**/*
-          coverage/**/*
           docs/**/*
   publish:
     needs: build
