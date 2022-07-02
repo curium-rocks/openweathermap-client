@@ -5,7 +5,7 @@ import axios from "axios";
 
 describe( 'PollutionApi', function() {
     const apiToken = process.env.OWM_TOKEN as string;
-    this.timeout(30000);
+    this.timeout(120000);
     describe( 'getCurrentAirPollution()', function() {
         it( 'Should provide pollution levels', function() {
             const api = new PollutionApi(axios);
