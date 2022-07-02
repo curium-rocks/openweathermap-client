@@ -23,11 +23,11 @@ jobs:
     - run: npm run build
     - run: npm run test
     - if: ${{ github.actor != 'dependabot[bot]' }}
-      name: qube scan
-      run: npm run sonarscan
+      name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONARQUBE_KEY: ${{ secrets.SONARQUBE_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONARQUBE_KEY }}
     - run: npm run doc
     - uses: actions/upload-artifact@v3
       with:

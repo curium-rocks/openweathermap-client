@@ -9,8 +9,7 @@
     "lint": "eslint src --ext .ts",
     "clean": "rm -fr build",
     "prepare": "npm run build",
-    "doc": "typedoc src/lib.ts",
-    "sonarscan": "sonar-scanner -Dsonar.qualitygate.wait=true -Dsonar.organization=curium-rocks -Dsonar.projectKey=curium-rocks_openweathermap-client -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONARQUBE_KEY -Dsonar.javascript.lcov.reportPath=coverage/"
+    "doc": "typedoc src/lib.ts"
   },
   "repository": {
     "type": "git",
@@ -38,7 +37,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "mocha": "^9.0.2",
     "nyc": "^15.1.0",
-    "sonarqube-scanner": "^2.8.1",
     "source-map-support": "^0.5.19",
     "ts-node": "^10.1.0",
     "typedoc": "^0.22.0",
