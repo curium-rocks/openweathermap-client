@@ -5,6 +5,7 @@ import axios from "axios";
 
 describe( 'PollutionApi', function() {
     const apiToken = process.env.OWM_TOKEN as string;
+    this.timeout(30000);
     describe( 'getCurrentAirPollution()', function() {
         it( 'Should provide pollution levels', function() {
             const api = new PollutionApi(axios);
@@ -38,20 +39,19 @@ describe( 'PollutionApi', function() {
     describe('getHistoricalAirPollution()', function() {
         it( 'Should provide data', function() {
             // eslint-disable-next-line no-invalid-this
-           this.timeout(5000);
-           const api = new PollutionApi(axios);
-           return api.getHistoricalAirPollution({
-               lat: 29.422789,
-               lon: -98.507065,
-               start: new Date(new Date().getDate()-1),
-               end: new Date(),
-               appid: apiToken
-           }).then((res) => {
-               should().exist(res.coord);
-               should().equal(res.coord.lat, 29.4228);
-               should().equal(res.coord.lon, -98.5071);
-               should().exist(res.list);
-           });
-       });
+            const api = new PollutionApi(axios);
+            return api.getHistoricalAirPollution({
+                lat: 29.422789,
+                lon: -98.507065,
+                start: new Date(new Date().getDate()-1),
+                end: new Date(),
+                appid: apiToken
+            }).then((res) => {
+                should().exist(res.coord);
+                should().equal(res.coord.lat, 29.4228);
+                should().equal(res.coord.lon, -98.5071);
+                should().exist(res.list);
+            });
+        });
     });
 });

@@ -17,7 +17,6 @@ describe( 'CurrentWeatherAPI', function() {
         should().exist(resp.wind);
     };
     describe( 'getCurrentWeather()', function() {
-
         it( 'Should provide information with just city', function() {
             const currentApi = new CurrentWeatherApi(axios);
             return currentApi.getCurrentWeather({
@@ -87,6 +86,7 @@ describe( 'CurrentWeatherAPI', function() {
                 basicAsserts(resp);
             })
         });
+        
     });
     describe('getCurrentWeatherForArea()', function(){
         it('Should provide weather for bounding area', function(){
@@ -107,6 +107,7 @@ describe( 'CurrentWeatherAPI', function() {
                 resp.list.forEach(basicAsserts);
             })
         });
+        
     });
     describe('getCurrentWeatherNearby()', function(){
         it('Should provide weather for things near the point', function(){
