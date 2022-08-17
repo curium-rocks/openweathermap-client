@@ -1,6 +1,6 @@
 {
   "name": "@curium.rocks/openweathermap-client",
-  "version": "0.1.1-alpha.23",
+  "version": "0.1.1-alpha.24",
   "description": "A typescript client for the OpenWeatherMap APIs",
   "main": "build/src/lib.js",
   "scripts": {
