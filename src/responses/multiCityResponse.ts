@@ -1,4 +1,4 @@
-import {CityWeather} from "../models/cityWeather";
+import { CityWeather } from '../models/cityWeather'
 
 export interface MultiCityResponse {
     list: Array<CityWeather>;

@@ -1,21 +1,22 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'commonjs': true,
-    'es2021': true,
+  env: {
+    browser: true,
+    es2021: true
   },
-  'extends': [
-    'google',
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-    'prettier'
+  extends: [
+    'standard'
   ],
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true,
-    },
-    'ecmaVersion': 12,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module'
   },
-  'rules': {
-  },
-};
+  plugins: [
+    '@typescript-eslint',
+    'chai-friendly'
+  ],
+  rules: {
+    'no-unused-expressions': 0,
+    'chai-friendly/no-unused-expressions': 2
+  }
+}
