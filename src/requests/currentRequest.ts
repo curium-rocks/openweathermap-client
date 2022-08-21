@@ -1,4 +1,4 @@
-import {Coordinate} from "../models/coordinate";
+import { Coordinate } from '../models/coordinate'
 
 export interface CurrentRequest {
     appid: string;

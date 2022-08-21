@@ -24,8 +24,8 @@
   ]
 }
  */
-import {Coordinate} from "../models/coordinate";
-import {PollutionLevels} from "../models/pollutionLevels";
+import { Coordinate } from '../models/coordinate'
+import { PollutionLevels } from '../models/pollutionLevels'
 
 export interface Main {
     aqi: number;

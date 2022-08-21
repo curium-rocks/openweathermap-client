@@ -1,9 +1,9 @@
-import {Coordinate} from "./coordinate";
-import {Weather} from "./weather";
-import {WeatherMain} from "./weatherMain";
-import {Wind} from "./wind";
-import {Clouds} from "./clouds";
-import {System} from "./system";
+import { Coordinate } from './coordinate'
+import { Weather } from './weather'
+import { WeatherMain } from './weatherMain'
+import { Wind } from './wind'
+import { Clouds } from './clouds'
+import { System } from './system'
 
 export interface CityWeather {
     coord: Coordinate;

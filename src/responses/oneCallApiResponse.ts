@@ -1,18 +1,7 @@
-import {Weather} from "../models/weather";
+import { Weather } from '../models/weather'
 
-export interface OneCallApiResponse {
-    lat: number;
-    lon: number;
-    timezone: string;
-    "timezone_offset": number;
-    current: CurrentWeatherOne;
-    minutely: Array<MinuteForecast>;
-    hourly: Array<HourlyForecast>;
-    daily: Array<DailyForecast>;
-    alerts?: Array<Alert>;
-}
 export interface Alert {
-    "sender_name": string;
+    'sender_name': string;
     event: string;
     start: number;
     end: number;
@@ -41,20 +30,20 @@ export interface BaseForecast {
     dt: number;
     pressure: number;
     humidity: number;
-    "dew_point": number;
+    'dew_point': number;
     uvi: number;
     clouds: number;
     visibility: number;
-    "wind_speed": number;
-    "wind_deg": number;
-    "wind_gust": number;
+    'wind_speed': number;
+    'wind_deg': number;
+    'wind_gust': number;
     weather: Array<Weather>;
     pop: number;
 }
 
 export interface HourlyForecast extends BaseForecast {
     temp: number;
-    "feels_like": number;
+    'feels_like': number;
 }
 export interface DailyForecast extends BaseForecast {
     rain: number;
@@ -63,29 +52,41 @@ export interface DailyForecast extends BaseForecast {
     sunset: number;
     moonrise: number;
     moonset: number;
-    "moon_phase": number;
+    'moon_phase': number;
     temp: TempForecast;
-    "feels_like": FeelsLikeForecast;
+    'feels_like': FeelsLikeForecast;
 
 }
 export interface Precipitation {
-    "1h": number;
+    '1h': number;
 }
 export interface CurrentWeatherOne {
     dt: number;
     sunrise: number;
     sunset: number;
     temp: number;
-    "feels_like": number;
+    'feels_like': number;
     pressure: number;
     humidity: number;
-    "dew_point": number;
+    'dew_point': number;
     uvi: number;
     clouds: number;
     visibility: number;
-    "wind_speed": number;
-    "wind_deg": number;
-    "weather": Array<Weather>;
+    'wind_speed': number;
+    'wind_deg': number;
+    'weather': Array<Weather>;
     rain?: Precipitation;
     snow?: Precipitation;
+}
+
+export interface OneCallApiResponse {
+    lat: number;
+    lon: number;
+    timezone: string;
+    'timezone_offset': number;
+    current: CurrentWeatherOne;
+    minutely: Array<MinuteForecast>;
+    hourly: Array<HourlyForecast>;
+    daily: Array<DailyForecast>;
+    alerts?: Array<Alert>;
 }
