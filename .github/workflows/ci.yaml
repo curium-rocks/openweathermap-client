@@ -30,3 +30,6 @@ jobs:
         npm_token: ${{ secrets.NODE_ACCESS_TOKEN }}
         user_name: 'ci'
         user_email: 'git@curium.rocks'
+        publish_docs: 'true'
+        gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+
