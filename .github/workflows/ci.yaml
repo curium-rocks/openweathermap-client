@@ -19,6 +19,7 @@ jobs:
         sonarqube_token: ${{ secrets.SONARQUBE_KEY }}
   publish:
     needs: validate
+    environment: github-pages
     permissions:
       pages: write
       id-token: write
