@@ -19,6 +19,10 @@ jobs:
         sonarqube_token: ${{ secrets.SONARQUBE_KEY }}
   publish:
     needs: validate
+    permissions:
+      pages: write
+      id-token: write
+      contents: write
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
