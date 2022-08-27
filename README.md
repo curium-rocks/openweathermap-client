@@ -10,6 +10,8 @@ APIs supported.
 - Pollution
 - CurrentWeather
 
+API documentation for this library can be found [here](https://curium-rocks.github.io/openweathermap-client/)
+
 ## Example(s)
 
 ```typescript
