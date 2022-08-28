@@ -36,3 +36,5 @@ jobs:
         user_name: 'ci'
         user_email: 'git@curium.rocks'
         publish_docs: 'true'
+        create_release: 'true'
+        token: ${{ secrets.github_token }}
