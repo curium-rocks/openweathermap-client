@@ -10,7 +10,7 @@ jobs:
       OWM_TOKEN: ${{ secrets.OWM_TOKEN}}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
     - name: Validate
       uses: curium-rocks/actions/validate-node@main
       with:
@@ -27,7 +27,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
     - name: Publish
       uses: curium-rocks/actions/publish-node@main
       with:
